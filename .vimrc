@@ -4,10 +4,10 @@ set pastetoggle=<F2>
 set clipboard=unnamed
 syntax on
 
-map <C-K> :pyf $HOME/bin/clang-format.py<cr>
-imap <C-K> <c-o>:pyf $HOME/bin/clang-format.py<cr>
+map <c-i> :pyf $HOME/bin/clang-format.py<cr>
+imap <c-i> <c-o>:pyf $HOME/bin/clang-format.py<cr>
 
-map <C-a> <esc>ggVG<CR>
+map <c-a> <esc>ggVG<CR>
 
 setlocal nobomb
 let mapleader = ","
@@ -49,6 +49,8 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'fatih/vim-go'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,7 +72,6 @@ colorscheme solarized
 
 " let's map the navigation keys
 map <c-l> <c-w><Right>
-map <c-j> <c-w><Left>
-map <c-i> <c-w><Up>
-map <c-k> <c-w><Down>
-
+map <c-h> <c-w><Left>
+map <c-k> <c-w><Up>
+map <c-j> <c-w><Down>
